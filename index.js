@@ -43,3 +43,14 @@ const questions = [{
   question: "Which function of Array object adds one or more elements to the front of an array and returns the new length of the array? ",
   answer: "unshift()"
 }]
+
+while(playAgain.toLowerCase() === 'y') {
+  playAgain = 'n';
+  for (var i = 0; i < questions.length; i++) {
+    play(questions[i].question, questions[i].answer);
+  }
+
+  console.log("Final score is ", score);
+  playAgain = readlineSync.question('Do you wanna play again (y/n)? ');
+
+}
